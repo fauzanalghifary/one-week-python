@@ -75,3 +75,15 @@ list3 = [2, 9, ['a', 'b', 'c']]
 list4 = copy.deepcopy(list3)
 list3[2][0] = 'x'
 print(list4)  # [2, 9, ['a', 'b', 'c']]
+
+### List comprehension
+
+squares = [i * i for i in range(1, 6)]
+print(squares)  # [1, 4, 9, 16, 25]
+
+evens = [i for i in range(1, 11) if i % 2 == 0]
+print(evens)  # [2, 4, 6, 8, 10]
+
+names = ["John", "Doe", "Jane", "Smith"]
+lengths = {name: len(name) for name in names}
+print(lengths)  # {'John': 4, 'Doe': 3, 'Jane': 4, 'Smith': 5}

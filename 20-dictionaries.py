@@ -116,3 +116,14 @@ user = {
         'street': 'Broadway'
     }
 }
+
+### Dictionary comprehension
+
+users = [
+    (0, 'Bob', 25),
+    (1, 'Jane', 30),
+    (2, 'Alice', 27),
+]
+
+username_mapping = {user[1]: user for user in users}
+print(username_mapping)  # {'Bob': (0, 'Bob', 25), 'Jane': (1, 'Jane', 30), 'Alice': (2, 'Alice', 27)}

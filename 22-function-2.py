@@ -40,7 +40,36 @@ def print_ages(**ages):
 print_ages(John=25, Jane=24, Tom=26, Alice=23)
 
 
+def add(x, y):
+    return x + y
+
+
+nums = {'x': 2, 'y': 3}
+print(add(**nums))  # 5
+
+
 ### Parameter List Ordering (args, *args, default parameters, **kwargs)
+
+
+def multiply(*args):
+    result = 1
+    for arg in args:
+        result *= arg
+    return result
+
+
+def apply(*args, operator):
+    if operator == '+':
+        return sum(args)
+    elif operator == '*':
+        return multiply(*args)
+    else:
+        return "Invalid operator"
+
+
+apply(1, 2, 3, 4, 5, operator='+')  # 15
+apply(1, 2, 3, 4, 5, operator='*')  # 120
+
 
 def demo2(a, b, *args, c=10, **kwargs):
     print(f"a={a}, b={b}, args={args}, c={c}, kwargs={kwargs}")
@@ -136,3 +165,22 @@ def get_top_students(**students):
 
 
 get_top_students(John=95, Jane=85, Tom=90, Alice=92)  # ['John', 'Alice']
+
+### Lambda Functions
+
+print((lambda x, y: x + y)(2, 3))  # 5
+
+
+def double(x):
+    return x * 2
+
+
+sequence = [1, 2, 3, 4, 5]
+doubled = [double(x) for x in sequence]  # [2, 4, 6, 8, 10]
+doubled2 = [x * 2 for x in sequence]  # [2, 4, 6, 8, 10]
+
+doubled3 = list(map(double, sequence))  # [2, 4, 6, 8, 10]
+doubled4 = list(map(lambda x: x * 2, sequence))  # [2, 4, 6, 8, 10]
+
+print(doubled)
+print(doubled2)
