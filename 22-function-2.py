@@ -168,6 +168,9 @@ get_top_students(John=95, Jane=85, Tom=90, Alice=92)  # ['John', 'Alice']
 
 ### Lambda Functions
 
+add = lambda x, y: x + y
+print(add(2, 3))  # 5
+
 print((lambda x, y: x + y)(2, 3))  # 5
 
 
