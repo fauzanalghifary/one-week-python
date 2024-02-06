@@ -17,11 +17,12 @@ print(age * 2)
 print(first_name[0])  # J
 print(first_name[-1])  # n
 print(first_name[0:3])  # Jur
-print(first_name[3:])  # gen
 print(first_name[:3])  # Jur
-print(first_name[0:5:2])  # [start:stop:step]  Jre
-# print(first_name[100]) # IndexError: string index out of range
-
+print(first_name[3:])  # gen
+print(first_name[0:5:1])  # Jurge 0,1,2,3,4
+print(first_name[0:5:2])  # [start:stop:step]  Jre 0,2,4
+print(first_name[0:5:3])  # Jg 0,3
+# print(first_name[100])  # IndexError: string index out of range
 
 ### None
 

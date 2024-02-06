@@ -6,18 +6,25 @@ print(type(isRaining))  # <class 'bool'>
 
 ### Comparison Operators
 
+print("---COMPARISON OPERATOR---")
+
 print(10 > 9)  # True
 print(10 == 9)  # False
 print(10 < 9)  # False
 print(2 != '2')  # True
 
-### Comparison Accross Data Types
+### Comparison Across Data Types
+
+print("---COMPARISON ACROSS DATA TYPES---")
 
 print(10 == '10')  # False
 print(10 == 10.0)  # True
+print(10 == 10.001)  # False
 print(10 == int('10'))  # True
 
 ### Truty and Falsy Values
+
+print("---TRUTHY FALSY---")
 
 """
 Falsy Values:
@@ -31,8 +38,13 @@ Falsy Values:
 - None
 """
 
+a = True
+b = not a
+
+print(bool(not False))  # True
 print(bool(False))  # False
 print(bool(0))  # False
+print(not not 0)  # False
 print(bool(0.0))  # False
 print(bool(''))  # False
 print(bool([]))  # False
@@ -61,13 +73,16 @@ print('pa' in 'apple')  # False
 print("---COMPARING STRINGS---")
 print("a" < "b")  # True
 print("a" < "A")  # False
-print("aaaa" < "AAA")  # False
+print("aZZZ" < "AAA")  # False
 
-print(ord("a"))  # 97
 print(ord("A"))  # 65
+print(ord("B"))  # 66
+print(ord("a"))  # 97
 print(ord("b"))  # 98
+print(ord("🚀"))  # 128640
 
 print(chr(97))  # a
 print(chr(65))  # A
+print(chr(47))  # A
 
 print('100' < '2')  # True

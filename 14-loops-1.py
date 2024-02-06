@@ -9,7 +9,7 @@ print("Thank you for saying hi")
 num = 1
 while num <= 10:
     print(num)
-    num += 1
+    num *= 2
 print("Blast off")
 
 import random
@@ -26,6 +26,13 @@ print(num1, num2)
 
 for char in "hello":
     print(char)
+
+'''
+JAVASCRIPT
+for (let char of "hello") {
+    console.log(char);
+}
+'''
 
 ### Range function
 

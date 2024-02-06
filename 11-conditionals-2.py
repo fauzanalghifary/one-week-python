@@ -8,5 +8,6 @@ if fav_color == "blue":
     print("My favorite color is blue")
     if fav_movie == "The Matrix":
         print("My favorite movie is The Matrix")
-        if fav_food == "pizza":
-            print("My favorite food is pizza")
+    elif fav_food == "pizza":
+        print("My favorite food is pizza")
+print('End of program')

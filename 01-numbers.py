@@ -4,9 +4,9 @@
 print(type(6))
 print(type(2.5))
 
-a = 5
+a = float(5)
 b = 2.4
-c = 31_000_000_000
+c = int(31e+9)
 d = .8
 e = 128e+2
 
@@ -27,3 +27,5 @@ print(5 * (10 + 3))
 This is a multiline
 comment.
 '''
+
+# this is a single line comment

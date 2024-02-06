@@ -6,3 +6,5 @@ print(age)
 first_name = "Rolf"
 
 PI = 3.14159
+
+LAST_NAME = "Smith"

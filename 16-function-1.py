@@ -56,3 +56,11 @@ def greet_user(name, age):
 
 message = greet_user(age=25, name="John")
 print(message)
+
+
+### Recursion
+
+def factorial(n):
+    if n == 0:
+        return 1
+    return n * factorial(n - 1)

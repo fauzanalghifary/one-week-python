@@ -1,13 +1,15 @@
-### Len
+### Len Function
 
 animal = "cat"
-print(len(animal))
+print(len(animal))  # 3`
+print(len(str(len(animal))))  # 1
 # print(len(123)) # TypeError: object of type 'int' has no len()
 
 ### Input
 
-# name = input("Enter your name: ")
-# print("Hello, " + name)
+name = input("Enter your name: ")
+print(type(name))
+print("Hello, " + name)
 
 ### Type Casting
 
