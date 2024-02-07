@@ -6,8 +6,8 @@ class Puppy:
         self.name = name
         self.breed = breed
         self.location = location
-        Puppy.num_of_puppies += 1
         self.tricks = []
+        Puppy.num_of_puppies += 1
 
     @staticmethod
     def whine():
