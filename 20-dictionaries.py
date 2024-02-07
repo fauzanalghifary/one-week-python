@@ -47,6 +47,7 @@ print(order)  # {}
 
 ### Dictionary are mutable too!
 
+
 new_order = {
     'starter': 'Salad',
     'main': 'Steak',
@@ -73,8 +74,8 @@ for value in new_order.values():
 for key, value in new_order.items():
     print(f'{key}: {value}')  # starter: Salad, main: Steak, price: 30
 
-for test in new_order:
-    print(test)  # starter, main, price
+for key in new_order:
+    print(key)  # starter, main, price
 
 ### Dictionary merging
 
@@ -119,11 +120,11 @@ user = {
 
 ### Dictionary comprehension
 
-users = [
-    (0, 'Bob', 25),
-    (1, 'Jane', 30),
-    (2, 'Alice', 27),
+new_users = [
+    [0, 'Bob', 25],
+    [1, 'Jane', 30],
+    [2, 'Alice', 27],
 ]
 
-username_mapping = {user[1]: user for user in users}
+username_mapping = {user[1]: user for user in new_users}
 print(username_mapping)  # {'Bob': (0, 'Bob', 25), 'Jane': (1, 'Jane', 30), 'Alice': (2, 'Alice', 27)}

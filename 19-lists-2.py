@@ -15,18 +15,18 @@ print(1 in [1, 2, 3])  # True
 
 ### Sort, Reverse, Count
 
-num = [11, 12, 13, 14, 15]
+num = [11, 22, 13, 14, 15]
 print(num.count(11))  # 1
 num.reverse()  # [15, 14, 13, 12, 11]
 num.sort()  # [11, 12, 13, 14, 15]
-print(num)
+print('after sort', num)
 num.sort(reverse=True)  # [15, 14, 13, 12, 11]
 
 ### List are Mutable
 
 nums1 = [11, 12, 13, 14, 15]
 nums2 = nums1
-nums1[0] = 99
+nums1[0] = 99  # [99, 12, 13, 14, 15]
 print(nums2)  # [99, 12, 13, 14, 15]
 nums2[1] = 88
 print(nums1)  # [99, 88, 13, 14, 15]
@@ -41,10 +41,19 @@ print(nums1 is nums2)  # True
 
 birthday = "11/12/1999"
 print(birthday.split("/"))  # ['11', '12', '1999']
+print(birthday.split(" "))  # ['11/12/1999']
+print(birthday.split("."))  # ['11/12/1999']
 
 date = ["11", "12", "1999"]
 print("/".join(date))  # 11/12/1999
+print(".".join(date))  # 11.12.1999
+print("".join(date))  # 11121999
+print(" ".join(date))  # 11 12 1999
 # print(date.join("/"))  # AttributeError: 'list' object has no attribute 'join'
+
+new_birthday = "11/12/1999"
+print(new_birthday.replace("/", "-"))  # 11-12-1999
+print("-".join(new_birthday.split('/')))  # 11-12-1999
 
 letters = ["a", "b", "c", "d"]
 print("".join(letters))  # abcd
@@ -52,10 +61,14 @@ print("".join(letters))  # abcd
 ### List Unpacking
 
 user = ["John", "Doe", 30]
-first_name, last_name, age = user
+first_name, last_name, *other = user
 
 item = [4, "Pizza", "Plain", 8.99]
-quantity, *others, price = item
+quantity, product, *others = item
+print(quantity, product, others)  # 4 Pizza ['Plain', 8.99]
+
+item2 = [4, "Pizza", "Plain", "Extra Cheese", "Garlic Bread", 8.99]
+quantity, product, *extras, price = item2
 
 ### Copying a List
 

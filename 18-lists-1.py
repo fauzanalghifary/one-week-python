@@ -11,10 +11,12 @@ print(a)  # ['h', 'e', 'l', 'l', 'o']
 print(tasks[0])  # Install Python
 print(tasks[1])  # Learn Python
 print(tasks[-1])  # Take a break
+print(tasks[-2])  # Learn Python
 
 ### Update Elements
 
-tasks[0] = "Install Python 3"
+tasks[0:2] = ["Install Python 3", "Learn Python 3"]
+print('ini update elements', tasks)  # ['Install Python 3', 'Learn Python 3', 'Take a break'
 
 ### Append and Extend
 
@@ -22,14 +24,18 @@ tasks.append("Forget Python")  # ['Install Python 3', 'Learn Python', 'Take a br
 
 people = ["Alice", "Bob", "Charlie"]
 people.extend(["David", "Eve"])  # ['Alice', 'Bob', 'Charlie', 'David', 'Eve']
+people.append(["David", "Eve"])  # ['Alice', 'Bob', 'Charlie', 'David', 'Eve', ['David', 'Eve']]
 
 char = ["a", "b", "c"]
 char.extend('def')  # ['a', 'b', 'c', 'd', 'e', 'f']
+char.extend(['def', 'ghi'])  # ['a', 'b', 'c', 'def', 'ghi']
 
 ### Insert
 
 nums = [1, 3, 4, 5]
 nums.insert(1, 2)  # [1, 2, 3, 4, 5]
+nums[1:4] = ['a', 'b', 'c']
+print('INI INSERT', nums)  # [1, 'a', 'b', 'c', 5]
 
 ### Slices
 
@@ -49,7 +55,7 @@ new_nums.remove(13)  # [11, 12, 14, 15]
 new_nums.pop()  # [11, 12, 14]
 new_nums.pop(1)  # [11, 14]
 del new_nums[0]  # [14]
-del new_nums[0:2]  # []
+del new_nums[0:200]  # []
 
 ### Looping Through Lists
 

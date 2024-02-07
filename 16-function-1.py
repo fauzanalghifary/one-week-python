@@ -32,7 +32,7 @@ def greet_user(name, age):
 
 
 message = greet_user("John", 25)
-print(message)
+print(message)  # Hello, John! You are 25 years old.
 
 
 ### Default parameter
@@ -42,7 +42,7 @@ def greet_user(name, age=18):
 
 
 message = greet_user("John")
-print(message)
+print(message)  # Hello, John! You are 18 years old.
 
 
 # def greet_user(name="John", age):  # SyntaxError: non-default argument follows default argument
@@ -50,11 +50,15 @@ print(message)
 
 ### Keyword argument
 
-def greet_user(name, age):
+def greet_user(name,
+               age,
+               location):
     return f"Hello, {name}! You are {age} years old."
 
 
-message = greet_user(age=25, name="John")
+message = greet_user(name="John",
+                     age=25,
+                     location="New York")
 print(message)
 
 

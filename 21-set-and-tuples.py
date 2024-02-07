@@ -28,8 +28,8 @@ print(dishes.count('pizza'))  # 1
 
 # Sets are unordered collections of unique elements.
 
-numbers = {1, 2, 3, 4, 4, 4, 4, 4, 4, 4, 4}
-print(numbers)  # {1, 2, 3, 4}
+numbers = {5, 1, -1, 2, -5, 3, 0, 4, 4, 4, 4, 4, 4, 4, 4}
+print(numbers, 'ini numbers')  # {0, 1, 2, 3, 4, 5, -5, -1}
 
 unique_numbers = set([1, 2, 3, 4, 4, 4, 4, 4, 4, 4])
 print(unique_numbers)  # {1, 2, 3, 4}
@@ -39,13 +39,15 @@ empty_set = set()
 unique_numbers.add(5)  # {1, 2, 3, 4, 5}
 unique_numbers.add(5)  # {1, 2, 3, 4, 5}
 unique_numbers.add(-1)  # {1, 2, 3, 4, 5, -1}
+print('uniiqqq', unique_numbers)  # {1, 2, 3, 4, 5, -1}
 
 unique_numbers.remove(3)  # {1, 2, 4, 5, -1}
 # unique_numbers.remove(3)  # KeyError: 3
 unique_numbers.discard(3)  # {1, 2, 4, 5, -1}
 
 unique_numbers.pop()  # 1
-print(unique_numbers)  # {2, 4, 5, -1}
+unique_numbers.pop()  # 2
+print('after pop', unique_numbers)  # {4, 5, -1}
 
 unique_numbers.clear()  # set()
 
