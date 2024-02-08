@@ -10,7 +10,7 @@ class Puppy:
         Puppy.num_of_puppies += 1
 
     @staticmethod
-    def whine():
+    def count_puppies():
         print("Whine! Whine! Whine!")
 
     @classmethod
