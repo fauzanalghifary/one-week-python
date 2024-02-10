@@ -41,7 +41,7 @@ print_ages(John=25, Jane=24, Tom=26, Alice=23)
 
 
 def add(x, y):
-    return x + y
+    return x + y, 'ok'
 
 
 nums = {'x': 2, 'y': 3}

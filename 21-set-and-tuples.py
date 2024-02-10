@@ -35,6 +35,8 @@ unique_numbers = set([1, 2, 3, 4, 4, 4, 4, 4, 4, 4])
 print(unique_numbers)  # {1, 2, 3, 4}
 
 empty_set = set()
+empty_set.update([100, 2, 3, 4, 5])
+print(empty_set)  # {2, 3, 4, 5, 100}
 
 unique_numbers.add(5)  # {1, 2, 3, 4, 5}
 unique_numbers.add(5)  # {1, 2, 3, 4, 5}

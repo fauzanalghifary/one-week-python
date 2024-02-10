@@ -27,6 +27,8 @@ print(num[3])  # three
 order['drinks'] = 'Tea'
 order['price'] += 10
 
+order.update({'drinks': 'Water', 'price': 30, 'name': 'John'})
+
 ### get() method and 'in' operator
 
 print(order.get('drinks'))  # Tea
